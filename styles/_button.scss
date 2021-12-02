@@ -2,17 +2,22 @@ button-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 100%;
   font-family: "PT Sans", sans-serif;
   background-color: #150811;
   height: 100vh;
 }
 .Button {
+  letter-spacing: 0.457143px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  color: #233148;
+  margin-bottom: -174px;
+  margin-left: 95px;
   display: inline-block;
   position: relative;
   background-color: #fccf18;
-  color: #fff;
-  font-size: 1.2rem;
   width: $button-width;
   height: $button-height;
   box-shadow: 0 2px 20px rgba(#000, 0.7), inset 0 1px rgba(#fff, 0.3);
@@ -44,12 +49,14 @@ button-wrap {
     content: attr(data-tooltip);
     width: $tooltip-width;
     height: $tooltip-height;
-    background-color: #fccf18;
+    background-color: #233148;
     font-size: 1rem;
+    color: white;
     border-radius: 0.25em;
     line-height: $tooltip-height;
     bottom: 90px;
     left: calc(50% - 70px);
+    z-index: 4;
   }
 
   &::after {
@@ -57,7 +64,7 @@ button-wrap {
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-top-color: #fccf18;
+    border-top-color: #233148;
     left: calc(50% - 10px);
     bottom: 70px;
   }
@@ -72,7 +79,7 @@ button-wrap {
 
   //- button hover
   &:hover {
-    background-color: #01baef;
+    background-color: #233148;
 
     .Button__text {
       top: -100%;
@@ -99,5 +106,38 @@ button-wrap {
 
   &:active {
     transform: translate(2px, 2px);
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .Button {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .Button {
+    margin: 0 auto;
+    width: $button-width-phone;
+    height: $button-height-phone;
+    margin-left: 50px;
+  }
+  &::before {
+    width: $tooltip-width-phone;
+    height: $tooltip-height-phone;
+  }
+  .Button__text {
+    line-height: 58px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .Button{
+    margin-left: 36px;
+  }
+} 
+@media screen and (max-width: 320px) {
+  .Button{
+    margin-left: 5px;
   }
 }

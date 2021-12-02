@@ -8,10 +8,15 @@ html {
   font-size: 16px;
 }
 $duration: 500ms;
-$button-height: 60px;
-$button-width: 200px;
+$button-height: 74px;
+$button-width: 390px;
 $tooltip-height: 60px;
 $tooltip-width: 140px;
+
+$button-height-phone: 54px;
+$button-width-phone: 280px;
+$tooltip-height-phone: 50px;
+$tooltip-width-phone: 130px;
 
 %Button__element {
   position: absolute;

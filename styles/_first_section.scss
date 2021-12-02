@@ -1,0 +1,130 @@
+.main-section {
+  background: url(../media/arrow.svg) center no-repeat, #233148;
+  position: relative;
+  padding-bottom: 85px;
+}
+.line {
+  position: absolute;
+  mix-blend-mode: normal;
+  background: #d9dfe6;
+  opacity: 0.2;
+  width: 1px;
+  height: 100%;
+}
+.line-left {
+  left: 15px;
+}
+.line-center {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.line-right {
+  right: 15px;
+}
+.main-title {
+  width: 480px;
+  padding-top: 133px;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -2.6px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-style: normal;
+  position: relative;
+  margin-left: 15px;
+}
+.main-title__item {
+  display: block;
+}
+.main-title__icon {
+  color: #1f65d9;
+  font-size: 28px;
+}
+.about-block {
+  padding-top: 124px;
+  padding-left: 132px;
+}
+.about-block__icon {
+  font-size: 52px;
+  color: #1f65d9;
+}
+.about-block {
+  padding-bottom: 186px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-block__item {
+  width: 440px;
+}
+.about-block__item:nth-child(2n) {
+  margin-left: 145px;
+}
+.about-block__item:nth-child(3),
+.about-block__item:nth-child(4) {
+  margin-top: 100px;
+}
+.about-block__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: 0.64px;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.about-block__text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.16px;
+  color: #8796ae;
+}
+
+@media screen and (max-width: 1080px) {
+  .about-block__item {
+    width: 340px;
+  }
+  .about-block__item:nth-child(2n) {
+    margin-left: 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-block {
+    padding-left: 0;
+  }
+  .about-block__item:nth-child(2n) {
+    margin-left: 0px;
+  }
+  .about-block__item {
+    margin-top: 100px;
+  }
+  .about-block__item {
+    width: 345px;
+  }
+  .main-title {
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .main-title {
+    width: auto;
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .about-block__title {
+    font-size: 22px;
+    line-height: 39px;
+    margin-top: 17px;
+    margin-bottom: 35px;
+  }
+  .about-block__item {
+    margin-top: 50px;
+  }
+  .about-block__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

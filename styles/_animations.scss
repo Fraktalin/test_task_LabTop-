@@ -2,8 +2,10 @@
   display: inline-block;
   overflow: hidden;
   line-height: 1;
+  text-align: left;
 }
 .word-wrapper__inner {
+  text-align: left;
   display: inline-block;
   transform: translateY(100%);
   animation: showText 0.8s 0.3s forwards;
@@ -17,7 +19,6 @@
   }
 }
 .animate-top-opacity {
-  display: inline-block;
   opacity: 0;
   transform: translate(0px, 120%);
   transition: all 0.5s ease 0s;

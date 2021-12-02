@@ -1,0 +1,39 @@
+.last-section {
+  padding-top: 300px;
+  margin-top: -310px;
+  height: 1164px;
+  background: #eaeff5;
+}
+.last-section-title {
+  margin-top: 82px;
+  padding-bottom: 600px;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -1.36px;
+  text-transform: uppercase;
+  color: #233148;
+  position: relative;
+  margin-left: 15px;
+}
+.last-section__item {
+  display: block;
+}
+.last-section__icon {
+  font-size: 28px;
+  color: #1f65d9;
+}
+
+@media screen and (max-width: 1080px) {
+  .last-section {
+    padding-top: 192px;
+  }
+}
+
+
+@media screen and (max-width: 415px) {
+  .last-section-title {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}

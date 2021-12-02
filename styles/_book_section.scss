@@ -1,0 +1,127 @@
+.section-book {
+  padding-top: 70px;
+  height: 310px;
+}
+.background {
+  position: absolute;
+  width: calc((100% + 1140px) / 2);
+  transform: translate(0, -50%);
+  height: 310px;
+  background: #1f65d9;
+}
+.section-book__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.book-title {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 31.997px;
+  line-height: 39px;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-left: 15px;
+}
+.book-title__item {
+  display: block;
+}
+.section-book__file {
+  position: absolute;
+  left: 377px;
+  top: 78px;
+}
+.book-text {
+  width: 217px;
+  letter-spacing: 0.48px;
+  font-weight: 400;
+  font-size: 23.9977px;
+  line-height: 34px;
+  color: #ffffff;
+  margin-left: 57px;
+  margin-top: 45px;
+}
+.book-image {
+  width: 677px;
+  height: 601px;
+  margin-top: -143px;
+}
+.main-wrapper {
+  margin-top: -86px;
+}
+@media screen and (max-width: 1440px) {
+  .section-book__file {
+    position: absolute;
+    left: 140px;
+    top: 78px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .background {
+    width: calc((100% + 1170px) / 2);
+  }
+}
+@media screen and (max-width: 1080px) {
+  .background {
+    width: calc((100% + 930px) / 2);
+  }
+  .book-image {
+    width: 400px;
+    height: auto;
+    margin-top: -207px;
+  }
+  .background {
+    transform: translate(0, -84%);
+    height: 230px;
+  }
+  .section-book__file {
+    left: 78px;
+  }
+  .book-title {
+    margin-top: -118px;
+  }
+  .book-text {
+    margin-top: -116px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .background {
+    width: 100%;
+  }
+  .book-image {
+    margin-top: -306px;
+    margin-left: -109px;
+  }
+  .book-title {
+    font-size: 24px;
+  }
+  .book-text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .book-image {
+    position: absolute;
+    right: 0;
+    width: 300px;
+  }
+  .section-book__wrapper {
+    flex-direction: column;
+  }
+  .book-title,
+  .book-text {
+    margin-left: 0;
+  }
+  .book-title {
+    margin-top: -150px;
+  }
+  .book-text {
+    margin-top: 0;
+  }
+  .section-book__file {
+    left: 0px;
+  }
+}
