@@ -1,0 +1,33 @@
+.word-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+}
+.word-wrapper__inner {
+  display: inline-block;
+  transform: translateY(100%);
+  animation: showText 0.8s 0.3s forwards;
+}
+@keyframes showText {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.animate-top-opacity {
+  display: inline-block;
+  opacity: 0;
+  transform: translate(0px, 120%);
+  transition: all 0.5s ease 0s;
+}
+.animate-top {
+  transform: translate(0px, 120%);
+  transition: all 0.5s ease 0s;
+}
+.animate-top-opacity._active,
+.animate-top.active._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}

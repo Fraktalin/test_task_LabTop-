@@ -1,0 +1,280 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-bold.woff2") format("woff2"), url("../fonts/gilroy-bold.woff") format("woff");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-semibold.woff2") format("woff2"), url("../fonts/gilroy-semibold.woff") format("woff");
+  font-weight: medium;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-regular.woff2") format("woff2"), url("../fonts/gilroy-regular.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.Button__textWrapper, .Button__text, .Button__icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.Button__text, .Button__icon {
+  -webkit-transition: top 500ms;
+  transition: top 500ms;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+body {
+  background: white;
+}
+
+.content-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.word-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.word-wrapper__inner {
+  display: inline-block;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-animation: showText 0.8s 0.3s forwards;
+          animation: showText 0.8s 0.3s forwards;
+}
+
+@-webkit-keyframes showText {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes showText {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.animate-top-opacity {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.animate-top {
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.animate-top-opacity._active,
+.animate-top.active._active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+button-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 100%;
+  font-family: "PT Sans", sans-serif;
+  background-color: #150811;
+  height: 100vh;
+}
+
+.Button {
+  display: inline-block;
+  position: relative;
+  background-color: #fccf18;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 200px;
+  height: 60px;
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.7), inset 0 1px rgba(255, 255, 255, 0.3);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.7), inset 0 1px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  -webkit-transition: background-color 500ms, -webkit-transform 100ms;
+  transition: background-color 500ms, -webkit-transform 100ms;
+  transition: background-color 500ms, transform 100ms;
+  transition: background-color 500ms, transform 100ms, -webkit-transform 100ms;
+}
+
+.Button__textWrapper {
+  overflow: hidden;
+}
+
+.Button__text {
+  line-height: 60px;
+  top: 0;
+}
+
+.Button__icon {
+  top: 100%;
+  background: url("https://cl.ly/0X3o100h2H0g/icon-download.svg") no-repeat center center;
+}
+
+.Button::before {
+  content: attr(data-tooltip);
+  width: 140px;
+  height: 60px;
+  background-color: #fccf18;
+  font-size: 1rem;
+  border-radius: 0.25em;
+  line-height: 60px;
+  bottom: 90px;
+  left: calc(50% - 70px);
+}
+
+.Button::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #fccf18;
+  left: calc(50% - 10px);
+  bottom: 70px;
+}
+
+.Button::before, .Button::after {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  visibility: hidden;
+}
+
+.Button:hover {
+  background-color: #01baef;
+}
+
+.Button:hover .Button__text {
+  top: -100%;
+}
+
+.Button:hover .Button__icon {
+  top: 0;
+}
+
+.Button:hover::before, .Button:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Button:hover::after {
+  bottom: 60px;
+}
+
+.Button:hover::before {
+  bottom: 80px;
+}
+
+.Button:active {
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+}
+/*# sourceMappingURL=main.css.map */
